@@ -32,3 +32,19 @@ def highest_bidder(people):
 
 print(logo)
 
+auction_end = False
+
+while not auction_end:
+    name = input("Enter your name: ")
+    bid = int(input("Enter your bid amount: $"))
+    
+    bidders(name, bid)
+
+    last_bid = input("Do I hear another bid? Type 'yes' or 'no' --> ")
+    if last_bid == 'yes':
+        system("cls")
+    else:
+        auction_end = True
+        highest_bidder(list_of_bidders)
+        print(f"The item goes to our highest bidder, {name}! Congratulations!")
+        
